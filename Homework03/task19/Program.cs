@@ -4,7 +4,7 @@
 // 12821 -> да
 // 23432 -> да
 
-Console.WriteLine("Введите четырехзначное число: ");
+Console.WriteLine("Введите пятизначное число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 
 // int div1 = number % 10; // Получает последнюю цифру числа 12345 (5)
@@ -12,7 +12,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 // int div3 = number / 10 % 10; // Получает предпоследнюю цифру числа 12345 (4)
 // int div4 = number / 1000 % 10; // Получает вторую цифру числа 12345 (2)
 
-if (number % 10 == number / 10000 || number / 10 % 10 == number / 1000 % 10)
+if (number % 10 == number / 10000 && number / 10 % 10 == number / 1000 % 10)
 {
     Console.WriteLine("Палиндром");
 }
