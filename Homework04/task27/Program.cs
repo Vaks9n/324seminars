@@ -7,7 +7,6 @@ Console.WriteLine("Введите число: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int reverse = 0;
 int sum = 0;
-Console.WriteLine(number / 10);
 for (int i = 0; i <= number; i++)
 {
     reverse = number % 10;
