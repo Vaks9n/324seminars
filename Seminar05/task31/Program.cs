@@ -14,40 +14,61 @@ int[] GetArray(int size, int leftRange, int rightRange)
     return arr; 
 }
 
-int SumPositiveElements(int[] arr)
+// int SumPositiveElements(int[] arr)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] > 0 )
+//         {
+//             sum = sum + arr[i];
+//         }
+        
+//     }
+//     return sum;
+// }
+
+// int SumNegativeElements(int[] arr)
+// {
+//     int sum = 0;
+//     for (int i = 0; i < arr.Length; i++)
+//     {
+//         if (arr[i] < 0)
+//         {
+//             sum = sum + arr[i];
+//         }
+        
+//     }
+//     return sum;
+// }
+
+(int, int) GetPositiveAndNegativeSums(int[] arr)
 {
-    int sum = 0;
+    int sumP = 0;
+    int sumN = 0;
+
     for (int i = 0; i < arr.Length; i++)
     {
-        if (arr[i] > 0 )
+        if (arr[i] > 0)
         {
-            sum = sum + arr[i];
+            sumP += arr[i];
         }
-        
+        else
+        {
+            sumN += arr[i];
+        }
     }
-    return sum;
+    return (sumP, sumN);
 }
 
-int SumNegativeElements(int[] arr)
-{
-    int sum = 0;
-    for (int i = 0; i < arr.Length; i++)
-    {
-        if (arr[i] < 0)
-        {
-            sum = sum + arr[i];
-        }
-        
-    }
-    return sum;
-}
 
 int[] array = GetArray(12, -9, 9);
 Console.WriteLine(string.Join(", ", array ));
 
 
-int SumPositive = SumPositiveElements(array);
-int SumNegative = SumNegativeElements(array);
+// int SumPositive = SumPositiveElements(array);
+// int SumNegative = SumNegativeElements(array);
+(int sumPositive, int SumNegative) = GetPositiveAndNegativeSums(array);
 
-Console.WriteLine(SumPositive);
+Console.WriteLine(sumPositive);
 Console.WriteLine(SumNegative);
