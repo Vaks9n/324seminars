@@ -49,3 +49,36 @@ void  ChangeMatrix(int[,] matrix)
     {
         for (int j = 1; j < matrix.GetLength(1); j++)
         {
+             
+            
+            matrix[i,j] = matrix[i, j] * matrix[i, j];
+        }
+        Console.WriteLine();
+    }
+   
+}
+
+int SumMainDiagonal(int[,] matrix)
+{
+    int sum = 0;
+    int min;
+    if (matrix.GetLength(0) >= matrix.GetLength(1))
+    {
+        min = matrix.GetLength(1);
+    }
+    else
+    {
+        min = matrix.GetLength(0);
+    }
+    for (int i = 0; i < min; i++)
+    {
+        sum = sum + matrix[i, i];
+    }
+    return sum;
+}
+int m = ReadNumber("Введите количество строк: ");
+int n = ReadNumber("Введите количество столбцов: ");
+int[,] matr = GetMatrix(m, n); 
+PrintMatrix(matr);
+ChangeMatrix(matr);
+PrintMatrix(matr);
