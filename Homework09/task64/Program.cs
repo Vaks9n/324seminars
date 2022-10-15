@@ -28,4 +28,4 @@ void Print1toN(int n, int a)
 
 
 int number = ReadNumber("Введите N");
-Print1toN(number);
+Print1toN(number, a);

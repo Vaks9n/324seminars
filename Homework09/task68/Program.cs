@@ -2,7 +2,8 @@
 // m = 2, n = 3 -> A(m,n) = 9
 
 
-int n = ReadNumber("Введите n: ");
+int m = ReadNumber("Введите n: ");
+int n = ReadNumber("Введите m: ");
 
 int functionAkkerman = Ack(m, n);
 
@@ -21,3 +22,4 @@ int ReadNumber(string input)
   int output = Convert.ToInt32(Console.ReadLine());
   return output;
 }
+
